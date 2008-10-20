@@ -1,5 +1,8 @@
 require 'digest/sha1'
 
+# Derived from a python implementation by Joe Gregorio:
+# http://bitworking.org/news/380/bloom-filter-resources
+
 # A Bloom Filter for tracking 3,000 'names', where 'names' are any
 # strings of any length. Can be used to track less than 3,000 names, or more, 
 # but going over will increase the false positive rate. This is currently
