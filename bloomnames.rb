@@ -23,15 +23,15 @@ class BloomNames
 
   attr_reader :filter
 
-  # Construct with a zero for an empty filter, or #
-  # pass in a Fixnum for an alreadly build filter
+  # Construct with a zero for an empty filter, or
+  # pass in a Fixnum for an alreadly built filter
   def initialize(filter=0)
     @filter = filter
   end
 
   # Add a key to the filter.
   def <<(name)
-    hashes(name).each{ |pos| @filter |= 2 ** pos}
+    hashes(name).each{ |pos| @filter |= 2 ** pos }
     self
   end
   alias :add :<<
